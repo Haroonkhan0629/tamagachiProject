@@ -6,5 +6,7 @@ class Tamagotchi {
         this.age = age
     }
 
-    
+
 }
+
+const pikatchu = new Tamagotchi(this.hunger, this.sleepiness, this.boredom, this.age)
