@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <title>Tamagotchi Project</title>
 </head>
+
 <body>
     <h1 id="title">I am _____, your pet!</h1>
-    <img src="https://tse2.mm.bing.net/th?id=OIP.T4QNxcFkHJ_zmNe1oH2XhAHaHa&pid=Api&P=0&h=220">
-    <button>Feed Your Pet</button>
-    <button>Train with Your Pet</button>
-    <button>Turn lights off zzzzz</button>
-    
+    <div id="pet">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.T4QNxcFkHJ_zmNe1oH2XhAHaHa&pid=Api&P=0&h=220">
+    </div>
+    <button id="feed" onclick="decreaseHunger()"><img src="https://tse3.mm.bing.net/th?id=OIP.Bi80-BZDMdNB8CKmk6BSYAHaHw&pid=Api&P=0&h=220"
+            alt="img"></button>
+    <button id="sleep" onclick="decreaseSleepiness()"><img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Zzz_sleep.svg/768px-Zzz_sleep.svg.png"
+            alt="img"></button>
+    <button id="train" onclick="decreaseBoredom()"><img src="https://tse1.mm.bing.net/th?id=OIP.3x8KY0h4VxYmOB7ndFhZRgHaHa&pid=Api&P=0&h=220"
+            alt="img"></button>
+
+            <div>
+                <h3>Hunger: <span id="hunger">1</span></h3>
+            </div>
+<div>
+    <h3>Sleepiness: <span id="sleepiness">1</span></h3>
+</div>
+<div>
+    <h3>Boredom: <span id="boredom">1</span></h3>
+</div>
 </body>
+
 </html>

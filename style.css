@@ -1,0 +1,27 @@
+body {
+    background-image: url("https://i.pinimg.com/736x/e4/ba/ae/e4baaebcc6791c33b2ae8b34472a6797.jpg");
+}
+
+#sleep {
+    transform: scale(.05);
+}
+
+#feed {
+    transform: scale(.2)
+}
+
+#train {
+    transform: scale(.2);
+}
+
+/* #pet:hover {
+    transform: scaleX(-1);
+} */
+
+/* .startButton {
+    height: 100vh;
+    width: 100vw;
+    background: url("https://i.pinimg.com/736x/f7/89/e2/f789e25629939ceef6d66371d59d6235--alternative-wallpapers.jpg");
+    opacity: .1;
+} */
+

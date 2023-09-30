@@ -4,15 +4,42 @@ titleEl.innerHTML = `I am ${petName}, your pet!`
 
 
 class Tamagotchi {
-    constructor(hunger, sleepiness, boredom, age) {
-        this.hunger = hunger
-        this.sleepiness = sleepiness
-        this.boredom = boredom
-        this.age = age
+    constructor() {
+        this.hunger = 1
+        this.sleepiness = 1
+        this.boredom = 1
+        this.age = 1
     }
 
+    ageUp() {
+        pet.age += 1
+        if (time > 0) {
+            setTimeout(ageUp, time)
+        }
+    }
 
 }
 
-const pikatchu = new Tamagotchi(this.hunger, this.sleepiness, this.boredom, this.age)
+const pet = new Tamagotchi()
 
+let time = 60000
+pet.ageUp()
+
+function update() {
+    
+}
+
+function decreaseHunger() {
+   pet.hunger --
+   document.getElementById("hunger").html = pet.hunger
+}
+
+function decreaseSleepiness() {
+    pet.sleepiness --
+    document.getElementById("sleepiness").html = pet.sleepiness
+}
+
+function decreaseBoredom() {
+    pet.boredom --
+    document.getElementById("boredom").html = pet.boredom
+}
