@@ -1,6 +1,6 @@
 let titleEl = document.getElementById("title")
 let petName = prompt("What is your pet's name")
-titleEl.innerHTML = `I am ${petName}, your pet!`
+titleEl.innerHTML = `${petName}`
 
 
 class Tamagotchi {
@@ -20,27 +20,22 @@ intervalTimer = setInterval(function () {
     document.getElementById("hunger").textContent = pet.hunger += 1
     document.getElementById("boredom").textContent = pet.boredom += 1
     document.getElementById("sleepiness").textContent = pet.sleepiness += 1
-    if(pet.hunger >= 10) {
-        $("h1").fadeOut(3000, function(){
-            $("h1").html("<h1>YOUR PET STARVED TO DEATH</h1>").fadeIn(3000)
+    if (pet.hunger >= 10 || pet.sleepiness >= 10 || pet.boredom >= 10) {
+        $("body").fadeOut(3000, function () {
+            $("body").css({
+                "background-image": "url('https://cdnb.artstation.com/p/assets/video_clips/images/046/206/795/large/sammie-cabrera-thumb.jpg?1644536086')",
+                "background-size": "100% 100%",
+            }).fadeIn(3000)
         })
-    } if(pet.sleepiness >= 10) {
-        $("h1").fadeOut(3000, function(){
-            $("h1").html("<h1>YOUR PET DIED FROM INSOMNIA</h1>").fadeIn(3000)
-        })
-    } if(pet.boredom >= 10) {
-        $("h1").fadeOut(3000, function(){
-            $("h1").html("<h1>YOUR PET DIED FROM ISOLATION</h1>").fadeIn(3000)
+        $("h1").fadeOut(3000, function () {
+            $("h1").html("<h1>YOUR PET DIED</h1>").fadeIn(3000)
         })
     }
 }, 5000)
 
-intervalTimer = setTimeout(function() {
+intervalTimer = setTimeout(function () {
     alert("Your pet has transformed!")
     document.getElementById("pet").src = "https://media.giphy.com/media/sPD8vBqQxd4s0/giphy.gif"
-    $("#pet").css({
-        "transform": "scale(1)"
-    })
 }, 20000)
 
 function decreaseHunger() {
@@ -82,4 +77,19 @@ function decreaseBoredom() {
         })
     }
 }
+
+// I found .animate() method on javascript MDN. I am choosing to transform the element with the id of "pet" which is the image of the pet. It's animated
+// to move from where it is to 300 px across the x axis and then back -250px. The duration takes 4 seconds total and it runs continuously. 
+document.getElementById("pet").animate(
+    [
+        { transform: "translateX(0px)" },
+        { transform: "translateX(200px)" },
+        { transform: "translateX(-50px)" }
+    ],
+    {
+        duration: 8000,
+        iterations: Infinity,
+    }
+)
+
 
