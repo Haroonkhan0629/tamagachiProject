@@ -1,5 +1,6 @@
 body {
-    background-image: url("https://i.pinimg.com/736x/e4/ba/ae/e4baaebcc6791c33b2ae8b34472a6797.jpg");
+    background-image: url("https://64.media.tumblr.com/59fd3cd91939a427cac708b992cad301/tumblr_ohx2xpUsAJ1v1vxovo1_1280.gifv");
+    background-size: 100% 100%;
 }
 
 #sleep {
@@ -14,8 +15,16 @@ body {
     transform: scale(.2);
 }
 
+h1 {
+    text-align: center;
+}
+
+#pet {
+    transform: scale(.2)
+}
+
 /* #pet:hover {
-    transform: scaleX(-1);
+    transform: rotateY(100deg);
 } */
 
 /* .startButton {
