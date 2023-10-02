@@ -44,6 +44,7 @@ h3 {
 }
 
 .button:focus {
+    transform: scale(.95);
     background-color: grey;
     opacity: .75;
 }
