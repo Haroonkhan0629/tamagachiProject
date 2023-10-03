@@ -24,7 +24,8 @@ intervalTimer = setInterval(function () {
         $("body").fadeOut(3000, function () {
             $("body").css({
                 "background-image": "url('https://cdnb.artstation.com/p/assets/video_clips/images/046/206/795/large/sammie-cabrera-thumb.jpg?1644536086')",
-                "background-size": "100% 100%",
+                "background-size": "cover",
+                "background-repeat": "no-repeat"
             }).fadeIn(3000)
         })
         $("h1").fadeOut(3000, function () {
@@ -45,8 +46,9 @@ function decreaseHunger() {
         pet.hunger--
         document.getElementById("hunger").textContent = pet.hunger
         $("body").css({
-            "background-image": "url('https://i.pinimg.com/736x/75/4a/71/754a715e67e774962781e3609ef065e5.jpg')",
-            "background-size": "100% 100%",
+            "background-image": "url('https://i.redd.it/67t58ofv0osx.png')",
+            "background-size": "cover",
+            "background-repeat": "no-repeat"
 
         })
     }
@@ -59,8 +61,9 @@ function decreaseSleepiness() {
         pet.sleepiness--
         document.getElementById("sleepiness").textContent = pet.sleepiness
         $("body").css({
-            "background-image": "url('https://tse4.mm.bing.net/th?id=OIP.WzLjG_i9M582QWuruDib7wHaEK&pid=Api&P=0&h=220')",
-            "background-size": "100% 100%",
+            "background-image": "url('https://i.pinimg.com/originals/63/05/f1/6305f137bc0ad1304bab7e4bccf396ca.gif')",
+            "background-size": "cover",
+            "background-repeat": "no-repeat"
         })
     }
 }
@@ -72,14 +75,13 @@ function decreaseBoredom() {
         pet.boredom--
         document.getElementById("boredom").textContent = pet.boredom
         $("body").css({
-            "background-image": "url('https://media.wired.com/photos/5f84c1d34dbf8ba438224a83/master/w_2560%2Cc_limit/OpEd-Internet-Digital-Parks-690130756.jpg')",
-            "background-size": "100% 100%"
+            "background-image": "url('https://camilaxiao.files.wordpress.com/2021/02/gym-pixel-art-fight-beat-em-up-game-interior-background-8bit-16bit.png')",
+            "background-size": "cover",
+            "background-repeat": "no-repeat"
         })
     }
 }
 
-// I found .animate() method on javascript MDN. I am choosing to transform the element with the id of "pet" which is the image of the pet. It's animated
-// to move from where it is to 300 px across the x axis and then back -250px. The duration takes 4 seconds total and it runs continuously. 
 document.getElementById("pet").animate(
     [
         { transform: "translateX(0px)" },
@@ -91,5 +93,3 @@ document.getElementById("pet").animate(
         iterations: Infinity,
     }
 )
-
-
