@@ -1,3 +1,4 @@
+
 let titleEl = document.getElementById("title")
 let petName = prompt("What is your pet's name")
 titleEl.innerHTML = `${petName}`
@@ -31,6 +32,11 @@ intervalTimer = setInterval(function () {
         $("h1").fadeOut(3000, function () {
             $("h1").html("<h1>YOUR PET DIED</h1>").fadeIn(3000)
         })
+        $("h3").fadeOut(3000, function () {
+            $("h3").html(" <a href=/game.html <h1> Play Again </h1> </a>").fadeIn(3000)
+        })
+        $("button").fadeOut(3000)
+        $("#pet").fadeOut(3000)
     }
 }, 5000)
 
