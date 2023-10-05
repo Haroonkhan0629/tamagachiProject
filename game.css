@@ -21,7 +21,8 @@ body {
     margin: 0 auto;
     transform: scale(.2);
     position: absolute;
-    left: 615px
+    left: 615px;
+    top: 140px
 }
 
 #train {
@@ -30,7 +31,7 @@ body {
     transform: scale(.2);
     position: absolute;
     left: 610px;
-    top: 170px;
+    top: 190px;
 }
 
 h1 {
@@ -59,7 +60,7 @@ h3 {
 }
 
 .button:focus {
-    transform: scale(.95);
+    transform: scale(.75);
     background-color: grey;
     opacity: .75;
 }
@@ -68,8 +69,8 @@ h3 {
     display: block;
     margin: 0 auto;
     position: absolute;
-    bottom: 50px;
-    left: 500px;
+    bottom: 70px;
+    right: 250px;
 }
 
 .container {
@@ -87,4 +88,18 @@ h3 {
 
 .margin {
     margin-bottom: 1rem;
+}
+
+#baby {
+    transform: scale(2);
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 60px;
+    left: 250px;
+}
+
+#baby-tag {
+    transform: scale(.5);
+    max-width: fit-content;
 }
