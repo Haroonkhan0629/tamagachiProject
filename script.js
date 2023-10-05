@@ -42,7 +42,7 @@ intervalTimer = setInterval(function () {
             $("h1").html("<h1>YOUR PET DIED</h1>").fadeIn(3000)
         })
         $("h3").fadeOut(3000, function () {
-            $("h3:eq(0)").html(" <a href=/game.html <h1> Play Again </h1> </a>").fadeIn(3000)
+            $("h3:eq(0)").html(" <a href=game.html <h1> Play Again </h1> </a>").fadeIn(3000)
         })
         $("button").fadeOut(3000)
         $("#pet").fadeOut(3000)
