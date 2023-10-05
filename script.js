@@ -15,7 +15,7 @@ class Tamagotchi {
 
 class Tamagotchi2 {
     constructor() {
-        this.age = 1
+        this.age = 0
     }
 }
 
@@ -58,7 +58,6 @@ intervalTimer = setTimeout(function () {
 intervalTimer = setTimeout(function () {
     alert("Your pet had a baby!")
     document.getElementById("baby").src = "https://media.giphy.com/media/CBvjuhJncUt6U/200.gif"
-    $("#baby-tag").html("<h3>Baby's Age: </h3>").fadeIn(1000)
 }, 45000)
 
 function decreaseHunger() {
